@@ -1,0 +1,40 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.section {
+
+    @media (max-width: 1200px) {
+        padding: 60px 15px;
+    }
+
+    @media (min-width: 1200px) {
+        padding: 94px 0;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.section__title {
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+
+    @media (max-width: 1200px) {
+        font-size: 28px;
+    }
+    
+    @media (min-width: 1201px) {
+        font-size: 36px;
+        margin-bottom: 50px;
+    }
+}

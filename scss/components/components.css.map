@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,KAAK,CAAC;EACF,WAAW,EAAE,qBAAqB;EAClC,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,IAAI;EACjB,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,IAAI;EACjB,KAAK,EAAE,oBAAoB;CAQ9B;;AANI,AAAD,iBAAa,CAAC;EACV,KAAK,EAAE,OAAO;CACjB;;AACA,AAAD,iBAAa,CAAC;EACV,KAAK,EAAE,iBAAiB;CAC3B",
+    "sources": [
+        "components.scss",
+        "_logo.scss",
+        "_button.scss",
+        "_socials.scss"
+    ],
+    "names": [],
+    "file": "components.css"
+}
