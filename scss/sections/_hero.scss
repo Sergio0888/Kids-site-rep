@@ -1,36 +1,35 @@
 .hero {
-    background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/img-bg.jpg);
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     
     @media (max-width: 550px) {
         padding: 118px 0;
         height: 400px;
-        background-image: url(../images/bg-image/bg_mob@1x.jpg);
+        background-position: left;
 
-        @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-            background-image: url(../images/bg-image/bg_mob@2x.jpg);
-        }
+        // @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        //     background-image: url(../images/bg-image/bg_mob@2x.jpg);
+        // }
     }
         
     @media (min-width: 551px) and (max-width: 1200px) {
         padding: 118px 0;
         height: 400px;
-        background-image: url(../images/bg-image/bg_tab@1x.jpg);
 
-        @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-            background-image: url(../images/bg-image/bg_tab@2x.jpg);
-        }
+        // @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        //     background-image: url(../images/bg-image/bg_tab@2x.jpg);
+        // }
     }
     
     @media (min-width: 1201px) {
         padding: 200px 0;
         height: 600px;
-        background-image: url(../images/bg-image/bg_desc@1x.jpg);
 
-        @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-            background-image: url(../images/bg-image/bg_desc@2x.jpg);
-        }
+        // @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        //     background-image: url(../images/bg-image/bg_desc@2x.jpg);
+        // }
     }
 
     &__container {

@@ -29,7 +29,7 @@
     }
 
         @media (min-width: 1201px) {
-            max-width: 270px;
+            width: 30%;
         }
 
         &-image {
@@ -38,15 +38,42 @@
     }
 
     &-box {
-        padding-top: 30px;
+        padding: 50px 20px;
+        display: flex;
+        flex-direction: column;
+        
+        &-price {
+            align-self: center;
+            margin-top: 30px;
+            box-sizing: border-box;
+            padding: 20px 20px;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.19;
+            text-align: center;
+            border: 1px solid $main-color;
+            border-radius: 5px;
+            background-color: $main-color;
+            color: $second-text-color;
+        }
     }
 
     &-name {
-        font-size: 16px;
+        font-size: 18px;
         font-weight: 500;
         line-height: 1.19;
         text-align: center;
-        margin-bottom: 10px;
+        margin-bottom: 30px;
+        
+
+        &-item {
+            list-style: square;
+            margin-left: 30px;
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
     }
 
     &-post {
@@ -54,6 +81,10 @@
         font-size: 16px;
         line-height: 1.19;
         color: $first-text-color;
-        text-align: center;
+
+        &._ind {
+            text-align: center;
+            line-height: 1.6;
+        }
     }
 }
