@@ -25,7 +25,7 @@ try {
     $mail->isSMTP();   
     $mail->CharSet = "UTF-8";
     $mail->SMTPAuth   = true;
-    //$mail->SMTPDebug = 2;
+    // $mail->SMTPDebug = 2;
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
     // Настройки вашей почты
@@ -37,20 +37,20 @@ try {
     $mail->setFrom('zagovoru.zagovoru@gmail.com', 'Имя отправителя'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
-    $mail->addAddress('zagovoru.zagovoru@gmail.com');  
+    $mail->addAddress('alya.matyash@gmail.com');  
 
     // Прикрипление файлов к письму
-if (!empty($file['name'][0])) {
-    for ($ct = 0; $ct < count($file['tmp_name']); $ct++) {
-        $uploadfile = tempnam(sys_get_temp_dir(), sha1($file['name'][$ct]));
-        $filename = $file['name'][$ct];
-        if (move_uploaded_file($file['tmp_name'][$ct], $uploadfile)) {
-            $mail->addAttachment($uploadfile, $filename);
-            $rfile[] = "Файл $filename прикреплён";
-        } else {
-            $rfile[] = "Не удалось прикрепить файл $filename";
-        }
-    }   
+// if (!empty($file['name'][0])) {
+//     for ($ct = 0; $ct < count($file['tmp_name']); $ct++) {
+//         $uploadfile = tempnam(sys_get_temp_dir(), sha1($file['name'][$ct]));
+//         $filename = $file['name'][$ct];
+//         if (move_uploaded_file($file['tmp_name'][$ct], $uploadfile)) {
+//             $mail->addAttachment($uploadfile, $filename);
+//             $rfile[] = "Файл $filename прикреплён";
+//         } else {
+//             $rfile[] = "Не удалось прикрепить файл $filename";
+//         }
+//     }   
 }
 // Отправка сообщения
 $mail->isHTML(true);
