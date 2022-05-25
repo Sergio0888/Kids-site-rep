@@ -11,12 +11,13 @@ $email = $_POST['form-email'];
 $text = $_POST['form-textarea-message'];
 
 // Формирование самого письма
-$title = "Заголовок письма";
+$title = "Новая заявка";
 $body = "
 <h2>Новое письмо</h2>
 <b>Имя:</b> $name<br>
-<b>Почта:</b> $email<br><br>
-<b>Сообщение:</b><br>$text
+<b>Почта:</b> $email<br>
+<b>Телефон:</b> $tel<br><br>
+<b>Примечание:</b><br>$text
 ";
 
 // Настройки PHPMailer
@@ -37,20 +38,20 @@ try {
     $mail->setFrom('zagovoru.zagovoru@gmail.com', 'Имя отправителя'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
-    $mail->addAddress('alya.matyash@gmail.com');  
+    $mail->addAddress('info@zagovoru.com.ua');  
 
     // Прикрипление файлов к письму
-// if (!empty($file['name'][0])) {
-//     for ($ct = 0; $ct < count($file['tmp_name']); $ct++) {
-//         $uploadfile = tempnam(sys_get_temp_dir(), sha1($file['name'][$ct]));
-//         $filename = $file['name'][$ct];
-//         if (move_uploaded_file($file['tmp_name'][$ct], $uploadfile)) {
-//             $mail->addAttachment($uploadfile, $filename);
-//             $rfile[] = "Файл $filename прикреплён";
-//         } else {
-//             $rfile[] = "Не удалось прикрепить файл $filename";
-//         }
-//     }   
+if (!empty($file['name'][0])) {
+    for ($ct = 0; $ct < count($file['tmp_name']); $ct++) {
+        $uploadfile = tempnam(sys_get_temp_dir(), sha1($file['name'][$ct]));
+        $filename = $file['name'][$ct];
+        if (move_uploaded_file($file['tmp_name'][$ct], $uploadfile)) {
+            $mail->addAttachment($uploadfile, $filename);
+            $rfile[] = "Файл $filename прикреплён";
+        } else {
+            $rfile[] = "Не удалось прикрепить файл $filename";
+        }
+    }   
 }
 // Отправка сообщения
 $mail->isHTML(true);

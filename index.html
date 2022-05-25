@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Заговори</title>
+    <link rel="shortcut icon" href="./images/logo-site.svg#logo">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -31,9 +32,9 @@
             </nav>
             <ul class="header__address">
                 <li class="header__address-item">
-                    <a class="header__address-link" href="mailto:zagovoru.zagovoru@gmail.com"> <svg class="header__adress-icon">
+                    <a class="header__address-link" href="mailto:info@zagovoru.com.ua"> <svg class="header__adress-icon">
                             <use href="./images/icons/contacts.svg#icon-mail"></use>
-                        </svg>zagovoru@gmail.com</a>
+                        </svg>info@zagovoru.com.ua</a>
                 </li>
                 <li class="header__address-item">
                     <a class="header__address-link" href="tel:+380958392598"> <svg class="header__adress-icon">
@@ -251,7 +252,7 @@
                             <a class="footer__contact-address" href="">г. Бориспіль, вул.Верхній Вал, 29-А</a>
                         </li>
                         <li class="footer__contact-item">
-                            <a class="footer__contact-link" href="mailto:zagovoru.zagovoru@gmail.com">zagovoru@gmail.com</a>
+                            <a class="footer__contact-link" href="mailto:info@zagovoru.com.ua">info@zagovoru.com.ua</a>
                         </li>
                         <li class="footer__contact-item">
                             <a class="footer__contact-link" href="tel:+380958392598">+38 095 83 92 598</a>
@@ -264,7 +265,7 @@
                 <h3 class="footer__title">МИ У СОЦМЕРЕЖАХ</h3>
                 <ul class="footer__socials">
                     <li class="socials__item">
-                        <a target="_blank" href="https://www.instagram.com/shar.bar_" class="socials__link _color-change">
+                        <a target="_blank" href="https://www.instagram.com/zagovoru" class="socials__link _color-change">
                             <svg class="socials__image">
                                 <use href="./images/icons/socials.svg#icon-inst"></use>
                             </svg>
@@ -286,13 +287,13 @@
                 <label for="subscribe-input"></label>
                 <input class="subscribe-input" name="subscribe-input" id="subscribe-input" type="email" placeholder="E-mail">
 
-                <button class="btn footer__btn" type="submit">Підписатись
+                <a target="_blank" href="https://t.me/oratory1" class="btn footer__btn">Підписатись
                     <span class="subscribe-btn-box">
                         <svg class="subscribe-btn-icon">
                             <use href="./images/icons/icon-telegram.svg#icon-telegram"></use>
                         </svg>
                     </span>
-                </button>
+                </a>
 
             </div> 
         </div>
@@ -304,7 +305,7 @@
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <div class="container form__container">
-                <form class="modal__form" enctype="multipart/form-data" method="post" onsubmit="send(event, 'send.php')">
+                <form class="modal__form" enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'send.php')">
                     <p class="modal__form-title">Заповніть анкету</p>
                     
                     
@@ -393,11 +394,11 @@
                     <a class="mobile-menu__contacts-tel" href="tel:+380958392598">+38-095-83-92-598</a>
                 </li>
                 <li class="mobile-menu__contacts-item">
-                    <a class="mobile-menu__contacts-mail" href="mailto:zagovoru.zagovoru@gmail.com">zagovoru@gmail.com</a>
+                    <a class="mobile-menu__contacts-mail" href="mailto:info@zagovoru.com.ua">info@zagovoru.com.ua</a>
                 </li>
                 </ul>
                     <ul class="mobile-menu__socials">
-                        <li class="mobile-menu__socials-item"> <a target="_blank" class="mobile-menu__socials-link  _column" href="https://www.instagram.com/shar.bar_">Instagram</a> </li>
+                        <li class="mobile-menu__socials-item"> <a target="_blank" class="mobile-menu__socials-link  _column" href="https://www.instagram.com/zagovoru">Instagram</a> </li>
                         <li class="mobile-menu__socials-item"> <a target="_blank" class="mobile-menu__socials-link" href="https://www.facebook.com/profile.php?id=100031102341626">Facebook</a> </li>
                     </ul>
                 </nav>
@@ -428,10 +429,10 @@
                 // ЗДЕСЬ УКАЗЫВАЕМ ДЕЙСТВИЯ В СЛУЧАЕ УСПЕХА ИЛИ НЕУДАЧИ
                 if (json.result == "success") {
                     // Если сообщение отправлено
-                    alert("Сообщение отправлено");
+                    alert("Ваша заявка відправлена");
                 } else {
                     // Если произошла ошибка
-                    alert("Ошибка. Сообщение не отправлено");
+                    alert("Помилка");
                 }
             // Если не удалось связаться с php файлом
             } else {alert("Ошибка сервера. Номер: "+req.status);}}; 
