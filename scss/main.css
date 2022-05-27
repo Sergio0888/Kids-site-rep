@@ -1336,6 +1336,9 @@ body {
 }
 
 .kurs__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-top: 30px;
   font-weight: 400;
   font-size: 16px;
@@ -1345,7 +1348,14 @@ body {
 }
 
 .kurs__list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-top: 30px;
+}
+
+.kurs__list-item-text {
+  text-align: center;
 }
 
 .kurs__box {
